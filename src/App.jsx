@@ -1,4 +1,7 @@
 import { useState, useRef } from 'react'
+import { render, screen } from '@testing-library/react';
+
+
 import './App.css'
 import Section from './components/Section.jsx'
 import ResumePreview from './components/ResumePreview.jsx'
