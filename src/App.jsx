@@ -9,33 +9,35 @@ import ExperienceSection from "./components/ExperienceSection.jsx";
 
 import { useReactToPrint } from "react-to-print";
 
+const sampleData = {
+  name: "Arman Zhumakhan",
+  email: "arman@gmail.com",
+  linkedin: "https://www.linkedin.com/in/arman",
+  education: [
+      {
+          school: "KBTU",
+          degree: "Bachelor",
+          graduation: "2023",
+      },
+  ],
+  experience: [
+      {
+          company: "Google",
+          position: "Software Engineer",
+          startDate: "2021",
+          endDate: "2023",
+      },
+      {
+          company: "Meta",
+          position: "Software Engineer",
+          startDate: "2023",
+          endDate: "2023",
+      },
+  ],
+}
+
 function App() {
-    const [data, setData] = useState({
-        name: "Arman Zhumakhan",
-        email: "arman@gmail.com",
-        linkedin: "https://www.linkedin.com/in/arman",
-        education: [
-            {
-                school: "KBTU",
-                degree: "Bachelor",
-                graduation: "2023",
-            },
-        ],
-        experience: [
-            {
-                company: "Google",
-                position: "Software Engineer",
-                startDate: "2021",
-                endDate: "2023",
-            },
-            {
-                company: "Meta",
-                position: "Software Engineer",
-                startDate: "2023",
-                endDate: "2023",
-            },
-        ],
-    });
+    const [data, setData] = useState(sampleData);
 
     const [submitted, setSubmitted] = useState(false);
 
@@ -75,7 +77,7 @@ function App() {
         <div className="App">
             <div className="fields">
                 <HeaderEdit
-                    loadSampleCV={() => setData(data)}
+                    loadSampleCV={() => setData(sampleData)}
                     handlePrint={handlePrint}
                 />
                 <PersonalSection data={data} handleData={handleData} />
@@ -86,17 +88,6 @@ function App() {
                     addExperience={addExperience}
                     removeExperience={removeExperience}
                 />
-                <div className="card">
-                    {submitted ? (
-                        <button onClick={() => setSubmitted(false)}>
-                            Edit
-                        </button>
-                    ) : (
-                        <button onClick={() => setSubmitted(true)}>
-                            Submit
-                        </button>
-                    )}
-                </div>
             </div>
             <div className="preview">
                 <ResumePreview data={data} reference={componentRef} />
