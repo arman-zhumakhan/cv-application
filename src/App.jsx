@@ -49,10 +49,26 @@ function App() {
         setData({ ...data, [id]: value });
     };
     const addExperience = () => {
-        console.log("add");
+        console.log("add experience");
+        setData({
+            ...data,
+            experience: [
+                ...data.experience,
+                {
+                    company: "",
+                    position: "",
+                    startDate: "",
+                    endDate: "",
+                },
+            ],
+        })
     };
-    const removeExperience = () => {
-        console.log("remove");
+    const removeExperience = (index) => {
+        console.log("remove experience");
+        setData({
+            ...data,
+            experience: data.experience.filter((item, i) => i !== index),
+        });
     };
 
     return (

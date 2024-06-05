@@ -9,7 +9,7 @@ function ExperienceSection({data, handleData, addExperience, removeExperience}) 
                     <input type="text" id="position" placeholder="Position" value={item.position} onChange={handleData}/>
                     <input type="text" id="startDate" placeholder="Start Date" value={item.startDate} onChange={handleData}/>
                     <input type="text" id="endDate" placeholder="End Date" value={item.endDate} onChange={handleData}/>
-                    <button onClick={removeExperience}>Remove Experience</button>
+                    <button onClick={removeExperience(index)}>Remove Experience</button>
                 </div>
             ))}
             <br/>
