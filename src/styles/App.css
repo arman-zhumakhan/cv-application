@@ -13,7 +13,7 @@
 }
 
 .fields {
-  background: grey;
+  background: white;
 }
 
 .heading{
@@ -25,6 +25,8 @@
 
 .preview {
   width: 21cm;
+  background: rgb(225, 224, 213);
+  border-radius: 20px;
 }
 
 
@@ -39,7 +41,7 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #aeaeae;
 }
 
 .forms {
@@ -48,3 +50,14 @@
   gap: 1em;
   border-radius: 10px;
 }
+
+button:active {
+  transform: scale(0.9);
+}
+
+.headerEdit button {
+  background-color: #f9a01b;
+  color: black;
+  margin: 0.5em;
+}
+
