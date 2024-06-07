@@ -15,3 +15,11 @@ The Project is built using React, HTML, CSS.
 ### Local development
 - `npm run dev`
 
+### Testing locally
+- `npm run build`
+- `npm run preview` 
+
+The `preview` command will boot up a local status web server that serves the files from `dist`
+
+## Run tests
+- `npm test tests/App.test.jsx`
