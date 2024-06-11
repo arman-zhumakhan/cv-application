@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 function ResumePreview({ data, reference }) {
     return (
@@ -30,5 +31,10 @@ function ResumePreview({ data, reference }) {
         </div>
     );
 }
+
+ResumePreview.propTypes = {
+    data: PropTypes.object,
+    reference: PropTypes.object,
+};
 
 export default ResumePreview;

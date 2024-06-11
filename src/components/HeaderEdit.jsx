@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function HeaderEdit({loadSampleCV, handlePrint}) {
     return (
         <div className="headerEdit">
@@ -7,5 +9,10 @@ function HeaderEdit({loadSampleCV, handlePrint}) {
         </div>
     );
 }
+
+HeaderEdit.propTypes = {
+    loadSampleCV: PropTypes.func,
+    handlePrint: PropTypes.func,
+};
 
 export default HeaderEdit;

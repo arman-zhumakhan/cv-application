@@ -39,8 +39,6 @@ const sampleData = {
 function App() {
     const [data, setData] = useState(sampleData);
 
-    const [submitted, setSubmitted] = useState(false);
-
     const componentRef = useRef();
     const handlePrint = useReactToPrint({
         documentTitle: "CV",

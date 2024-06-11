@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ExperienceSection({data, handleData, addExperience, removeExperience}) {
     return (
         <section>
@@ -18,5 +20,12 @@ function ExperienceSection({data, handleData, addExperience, removeExperience}) 
         </section>
     );
 }
+
+ExperienceSection.propTypes = {
+    data: PropTypes.object,
+    handleData: PropTypes.func,
+    addExperience: PropTypes.func,
+    removeExperience: PropTypes.func,
+};
 
 export default ExperienceSection;

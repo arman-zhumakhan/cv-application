@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function EducationSection({data, handleData}){
     return (
         <section>
@@ -10,5 +12,10 @@ function EducationSection({data, handleData}){
         </section>
     );
 }
+
+EducationSection.propTypes = {
+    data: PropTypes.object,
+    handleData: PropTypes.func,
+};
 
 export default EducationSection;

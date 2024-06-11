@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function PersonalSection({data, handleData}) {
   return (
     <section>
@@ -10,5 +12,10 @@ function PersonalSection({data, handleData}) {
     </section>
   );
 }
+
+PersonalSection.propTypes = {
+  data: PropTypes.object,
+  handleData: PropTypes.func,
+};
 
 export default PersonalSection;
