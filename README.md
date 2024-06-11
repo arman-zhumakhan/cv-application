@@ -22,4 +22,4 @@ The Project is built using React, HTML, CSS.
 The `preview` command will boot up a local status web server that serves the files from `dist`
 
 ## Run tests
-- `npm test tests/App.test.jsx`
+- `npm test tests`

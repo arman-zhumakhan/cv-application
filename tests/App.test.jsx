@@ -9,7 +9,7 @@ describe("App component", () => {
       expect(screen.getByText('CV Application')).toBeInTheDocument();
     });
 
-    it('renders the sample data after clicking the Load Sample CV button', async () => { // Add 'async' keyword here
+    it('renders the sample data after clicking the Load Sample CV button', async () => {
       const user = userEvent.setup();
       render(<App />);
       const loadSampleCVButton = screen.getByText('Load Sample CV');
